@@ -3,6 +3,7 @@ from src.pages.login import locators
 
 
 class LoginPage:
+    
     def __init__(self,page):
         self.page=page 
         self.login_form = page.locator(locators.Login.LOGINFORM)
