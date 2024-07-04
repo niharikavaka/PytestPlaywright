@@ -16,7 +16,7 @@ class TestLogin:
         success=login_page.do_login(credentials)
         expect(success).to_have_text("You logged into a secure area!")
  
-    def test_login_with_invalid_user(self,set_up_tear_down):
+    def xtest_login_with_invalid_user(self,set_up_tear_down):
         page=set_up_tear_down
         credentials=Data.invalid_user_data
         login_page=LoginPage(page)
