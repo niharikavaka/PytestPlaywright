@@ -9,7 +9,7 @@ from src.data.data1 import Data
 @pytest.mark.usefixtures("set_up_tear_down")
 class TestLogin:
     
-    def xtest_login_with_standard_input(self,set_up_tear_down):
+    def test_login_with_standard_input(self,set_up_tear_down):
         page=set_up_tear_down
         credentials=Data.user_data                             
         login_page=LoginPage(page)
@@ -22,7 +22,7 @@ class TestLogin:
         login_page=LoginPage(page)
         fail=login_page.do_login(credentials)
         if credentials['username'] != "practice":
-          expect(fail).to_have_text("Your username is invalid!")
+            expect(fail).to_have_text("Your username is invalid!")
         else:
-          expect(fail).to_have_text("Your password is invalid!")
-
+            expect(fail).to_have_text("Your password is invalid!")
+ 
