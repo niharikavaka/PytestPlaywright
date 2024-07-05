@@ -2,7 +2,7 @@ import pytest
 from src.resources import locators
 
 
-@pytest.fixture()
+@pytest.fixture(scope="module")
 def set_up_tear_down(page):
     page.goto('https://practice.expandtesting.com/')
     page.locator(locators.Login.DROPDOWN).click()
