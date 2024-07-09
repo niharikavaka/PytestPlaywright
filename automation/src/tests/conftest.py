@@ -1,10 +1,10 @@
 import pytest
-from src.resources import locators
+from automation.src.resources.locators import Login
 
 
 @pytest.fixture()
 def set_up_tear_down(page):
     page.goto('https://practice.expandtesting.com/')
-    page.locator(locators.Login.DROPDOWN).click()
-    page.locator(locators.Login.EXAMPLES).click()
+    page.locator(Login.DROPDOWN).click()
+    page.locator(Login.EXAMPLES).click()
     yield page

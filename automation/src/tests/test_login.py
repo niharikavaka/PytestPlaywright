@@ -1,11 +1,17 @@
+# from playwright.sync_api import Page
+# from playwright.sync_api import expect
+# from src.resources import locators
+# from src.pages.login.LoginPage import LoginPage
+
+# import pytest
+# from src.data.data1 import Data
+
 from playwright.sync_api import Page
 from playwright.sync_api import expect
-from src.resources import locators
-from src.pages.login.LoginPage import LoginPage
-
+from automation.src.resources import locators
 import pytest
-from src.data.data1 import Data
-
+from automation.src.data.data1 import Data
+from automation.src.pages.login.LoginPage import LoginPage
 @pytest.mark.usefixtures("set_up_tear_down")
 class TestLogin:
     

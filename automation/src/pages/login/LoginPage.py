@@ -1,4 +1,4 @@
-from src.pages.login import locators
+from automation.src.pages.login import locators
 
 
 class LoginPage:
